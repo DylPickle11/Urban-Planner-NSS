@@ -1,11 +1,11 @@
 using System;
 
-namespace planner
+namespace Planner
 {
     public class Building
     {
         //Private Field
-        private string _designer;
+        private string _designer = "Dylan";
         private DateTime _dateConstructed;
         private string _address;
         private string _owner;
@@ -27,6 +27,14 @@ namespace planner
             {
                 return $"{Width * Depth* (3 * Stories)}";
             }
+        }
+        public string Description
+        {
+            get
+            {
+                return ($"{_address} Designed by:{_designer} Date Constructed:{_dateConstructed} Owned by:{_owner} Volume:{Volume} ");
+            }
+
         }
 
         // Methods
