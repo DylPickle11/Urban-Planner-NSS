@@ -12,12 +12,14 @@ namespace Planner
 
         //Constructor-special method in a class that is called when a new instance of the class is created. The role of a constructor is to make sure the new object is setup and ready for use immediately after it is created.
 
-        public Building(string address)
+        public Building(string address, string name)
         {
             _address = address;
+            Name = name;
         }
 
         //Public accessibility 
+        public string Name { get; set; }
         public int Stories { get; set; }
         public double Width { get; set; }
         public double Depth { get; set; }
@@ -25,7 +27,7 @@ namespace Planner
         {
             get
             {
-                return $"{Width * Depth* (3 * Stories)}";
+                return $"{Width * Depth * (3 * Stories)}";
             }
         }
         public string Description
